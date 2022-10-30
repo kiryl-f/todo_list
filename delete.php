@@ -6,4 +6,4 @@ $todo_list = json_decode($json, true);
 unset($todo_list[$todo_name]);
 file_put_contents('todo.json', json_encode($todo_list));
 
-header('Location: index.php');
+//header('Location: index.php');

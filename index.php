@@ -12,8 +12,10 @@
 
 <body>
 <form action="new_todo.php" method="post">
-    <input type="text" name="todo_name" placeholder="Enter your todo here"
-    <button>New ToDo</button>
+    <label>
+        <input type="text" name="todo_name" placeholder="Enter your todo here"
+    </label>
+    <button type="submit">New ToDo</button>
 </form>
 
 <?php
@@ -22,7 +24,9 @@ $todo_list = json_decode($json, true);
 //var_dump($todo_list);
 foreach ($todo_list as $name => $todo): ?>
     <div>
-        <input type="checkbox" <?php echo $todo['completed'] ? 'checked' : '' ?>>
+        <label>
+            <input type="checkbox" <?php echo $todo['completed'] ? 'checked' : '' ?>>
+        </label>
         <?php echo $name ?>
         <form action="delete.php" method="post">
             <input type="hidden" name = "todo_name" value=<?php echo $name?>>
