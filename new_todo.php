@@ -8,5 +8,4 @@ if($todo_name) {
     file_put_contents('todo.json', json_encode($todo_list));
 }
 
-//var_dump(file_get_contents('todo.json'));
 header('Location: index.php');

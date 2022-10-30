@@ -1,8 +1,3 @@
-<?php
-
-
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -21,7 +16,7 @@
 <?php
 $json = file_get_contents('todo.json');
 $todo_list = json_decode($json, true);
-//var_dump($todo_list);
+
 foreach ($todo_list as $name => $todo): ?>
     <div>
         <label>
