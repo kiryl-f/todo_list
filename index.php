@@ -14,17 +14,18 @@
 </form>
 
 <?php
+
 $json = file_get_contents('todo.json');
 $todo_list = json_decode($json, true);
 
-foreach ($todo_list as $name => $todo): ?>
+foreach ($todo_list as $todo): ?>
     <div>
         <label>
             <input type="checkbox" <?php echo $todo['completed'] ? 'checked' : '' ?>>
         </label>
-        <?php echo $name ?>
+        <?php echo $todo['text'] ?>
         <form action="delete.php" method="post">
-            <input type="hidden" name = "todo_name" value=<?php echo $name?>>
+            <input type="hidden" name = "todo_name" value=<?php echo $todo['text']?>>
             <button>Delete</button>
         </form>
     </div>
