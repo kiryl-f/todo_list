@@ -14,4 +14,4 @@ foreach($todo_list as $todo) {
 
 file_put_contents('todo.json', json_encode(array_values($todo_list)));
 
-header('Location: index.php');
+//header('Location: index.php');

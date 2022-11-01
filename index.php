@@ -5,7 +5,10 @@
     <title>Document</title>
 </head>
 
-<body>
+<br>
+<img src="todo.jpg" alt="Add your todo's">
+<br>
+
 <form action="new_todo.php" method="post">
     <label>
         <input type="text" name="todo_name" placeholder="Enter your todo here"
@@ -14,6 +17,7 @@
 </form>
 
 <?php
+
 
 $json = file_get_contents('todo.json');
 $todo_list = json_decode($json, true);
